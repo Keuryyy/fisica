@@ -1,0 +1,24 @@
+import javax.swing.JOptionPane;
+
+public class MovimentoCarro {
+    public static void main(String[] args) {
+        String axInput = JOptionPane.showInputDialog("Digite a aceleração ax (m/s²):");
+        double ax = Double.parseDouble(axInput);
+
+        String ayInput = JOptionPane.showInputDialog("Digite a aceleração ay (m/s²):");
+        double ay = Double.parseDouble(ayInput);
+
+        String vxInput = JOptionPane.showInputDialog("Digite a velocidade inicial Vx (m/s):");
+        double vx = Double.parseDouble(vxInput);
+
+        String vyInput = JOptionPane.showInputDialog("Digite a velocidade inicial Vy (m/s):");
+        double vy = Double.parseDouble(vyInput);
+
+        double t = vy / Math.abs(ay); 
+        double vFinalX = vx + ax * t; 
+        double vFinalY = vy + ay * t; 
+
+        JOptionPane.showMessageDialog(null, "A velocidade do carro quando atinge a maior coordenada y é: "
+                + Math.sqrt(vFinalX * vFinalX + vFinalY * vFinalY) + " m/s");
+    }
+}
