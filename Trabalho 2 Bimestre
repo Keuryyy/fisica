@@ -1,0 +1,13 @@
+import javax.swing.JOptionPane;
+
+public class T2bim {
+
+    public static void main(String[] args) {
+        String inputCorrenteDeslocamento = JOptionPane.showInputDialog("Digite a corrente de deslocamento (A):");
+        double correnteDeslocamento = Double.parseDouble(inputCorrenteDeslocamento);
+        
+        double correnteDescarga = 4 * correnteDeslocamento;
+        
+        JOptionPane.showMessageDialog(null, "A corrente de descarga do capacitor é: " + correnteDescarga + " A");
+    }
+}
